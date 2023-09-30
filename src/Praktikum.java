@@ -21,10 +21,11 @@ public class Praktikum {
             return false;
         } else if (year % 400 == 0) {
             return true;
-        } else if (year % 100 == 0) {
-            return false;
-        } else {
-            return true;
-        }
+        /*
+            Ревью: можно избежать дополнительных условных операторов если изменить условие
+               на (year % 100 != 0) и сразу вернуть его значение
+        */
+        /*изменила, стало аккуратнее*/
+        } else return year % 100 != 0;
     }
 }
